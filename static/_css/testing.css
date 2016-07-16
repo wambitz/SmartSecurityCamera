@@ -1,0 +1,30 @@
+/* CSS Document */
+#testing {
+	position: absolute;
+	left: 15%;
+	top: 150px;
+	width: 90%;
+	height: 80%;
+	z-index: 11;
+	color: rgba(0,0,0,1);
+	text-align: justify;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+#testing p img {
+	float: left;
+	max-width:90%;
+	height:auto;
+	width:auto;
+}
+
+#testing form{
+	clear: left;
+}
+
+#fbimg	{
+	max-width:40%;
+	height:auto;
+	width:auto;
+}
+

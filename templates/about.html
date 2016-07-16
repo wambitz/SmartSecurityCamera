@@ -1,0 +1,32 @@
+{% block head %}
+ <link href="{{ url_for('static', filename='_css/layout.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/about.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/mobile.css') }}" rel="stylesheet" type="text/css" media="only screen and (max-width:700px)">
+{% endblock %}
+
+
+{% extends "layout.html" %}
+{% block content %}
+<div id="about">
+<h1>Obsever On Server</h1>
+<h2>About us</h2>
+<div>
+  <p>We are a group of mechatronics engineers which have in mind the increase need of multi purpose devices,
+    it that so that we want to create a camera that adapt to your needs, so you can choose your features unlike 
+    the market products.  Also we have considered the need of interconectivity of our days, so we have developed this
+    product so it can be accesed from any device either be a mobile phone, tablet or computer while it has a browser. 
+  <p> With this device you'll be able to use it like a security system, or a surveillance system for your home,
+    also you can add different functionality with the embedded sensors, this is truly a smart camera and 
+    it is design to have only the things you want or need.
+  <p>Some of our functionalities are: 
+  <ul>
+    <li>Send e-mail photo taking</li>
+    <li>Video streaming </li>
+    <li>Intruder advice</li>
+    <li>Web user interface</li>
+    <li>Flash for night photos</li>
+  </ul>
+</div>
+</div>
+
+{% endblock %}

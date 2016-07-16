@@ -1,0 +1,114 @@
+{% block head %}
+ <link href="{{ url_for('static', filename='_css/layout.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/testing.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/mobile.css') }}" rel="stylesheet" type="text/css" media="only screen and (max-width:700px)">
+{% endblock %}
+
+{% extends "layout.html" %}
+{% block content %}
+<!-- > Services </!-->
+<div id="testing">
+<h1>TESTING</h1>
+<p>Testing {{function}}</p>
+
+<!-- > E-mail </!-->
+{% if mail %} <p>Send e-mail</p> 
+ <p>
+  <form method="POST" action="/mail">
+	 <dl>
+		<dt>E-mail: 
+		<dd><input type="email" name="email" required><br/>
+		<dt>Message:
+		<dd><textarea name="message" rows="5" cols="40" required></textarea>
+		<dd><input type="submit" name="submit" value="Send">
+	 </dl>
+  </form>
+ </p>
+{% endif %} 
+
+<!-- > Whatsapp </!-->
+{% if wa %}  <p>Send a Message on Whatsapp</p> 
+<p>
+  <form method="POST" action="/wa">
+	 <dl>
+		<dt>Message:
+		<dd><textarea name="wamsg" rows="5" cols="40" required></textarea>
+		<dd><input type="submit" name="submit" value="Send">
+	 </dl>
+  </form>
+ </p>
+
+{% endif %}
+
+<!-- > Facebook </!-->
+{% if fb %} <p>Post on facebook</p> 
+<p>
+  <form method="POST" action="/fb">
+	 <dl>
+		<dt>Message:
+		<dd><textarea name="fbmsg" rows="5" cols="40" required></textarea>
+		<dd><input type="submit" name="submit" value="Send">
+	 </dl>
+  </form>
+ </p>
+ <p>
+  <form method="POST" action="/fbimg">
+	<img id="fbimg" src="{{ url_for('static', filename='_images/python.jpg') }}" alt="Camera Picture" 
+	  title="Camera Upload">
+	 <dl>
+		<dd><input type="submit" name="submit" value="Send">
+	 </dl>
+  </form>
+ </p>
+{% endif %}
+
+<!-- > Twitter </!-->
+{% if twitter %} 
+	<p>Post on twitter</p> 
+{% endif %}
+
+<!-- > Photo </!-->
+{% if picture %} 
+	<p>Take picture and send it to e-mail <br/>
+	<img src="{{ url_for('static', filename='_images/python.jpg') }}" alt="Camera Picture" 
+	  title="Camera Upload">	 
+	</p><br/>
+	<form method="POST" action="/attachpic">
+	 <dl>
+		<dt>E-mail: 
+		<dd><input type="email" name="usermail" required><br/>
+		<dd><input type="submit" name="submit" value="Send">
+	 </dl>
+	</form>
+{% endif %}
+
+<!-- > Streaming </!-->
+{% if stream %} 
+	<p>Streaming Video</p> 
+{% endif %}
+
+<!-- > Sensor </!-->
+{% if PIR %} 
+	<p>Sensor</p> 
+{% endif %}
+
+<!-- > LED </!-->
+{% if led %} 
+	<p>LEDs ON</p> 
+{% endif %}
+
+{% if mode_on %} 
+	<p>SYSTEM ON</p> 
+	<img src="{{ url_for('static', filename='_images/python.jpg') }}" alt="Camera Picture" 
+	  title="Camera Upload">	 
+	</p><br/>
+{% endif %}
+
+{% if mode_off %} 
+	<p>SYSTEM OFF</p> 
+{% endif %}
+
+</div>
+
+
+{% endblock %}

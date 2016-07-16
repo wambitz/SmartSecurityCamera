@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Observer On Server</title>
+
+{% block head %}
+ <link href="{{ url_for('static', filename='_css/layout.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/mobile.css') }}" rel="stylesheet" type="text/css" media="only screen and (max-width:700px)">
+{% endblock %}
+
+</head>
+
+<body class="bodyback">
+<div id="logo"><a href="/"><img src="{{ url_for('static', filename='_images/logo.png') }}" width="150" height="138" alt="Observer On Server"></div>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+
+{% if not session.logged_in %}
+<div id="login"><a href="/login">Login</a></div>
+{% endif %}
+
+{% if session.logged_in %}
+<div id="login"><a href="/logout">Logout</a></div>
+{% endif %}
+
+
+{% block content %}{% endblock %}
+<footer>
+&copy; Todos los derechos reservados Observer On Server 2014.<br />
+            Esta página puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la fuenta completa y
+            su dirección electrónica, de <br /> 
+            otra forma requiere permiso previo por escrito de la empresa.
+</footer>
+</body>
+</html>

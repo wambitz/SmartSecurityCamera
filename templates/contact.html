@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block head %}
+ <link href="{{ url_for('static', filename='_css/layout.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/contact.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/mobile.css') }}" rel="stylesheet" type="text/css" media="only screen and (max-width:700px)">
+{% endblock %}
+
+{% block content %}
+<div class="contact">
+
+<h1>&nbsp;</h1>
+<h1>&nbsp;</h1>
+<h1>&nbsp;</h1>
+<h1>&nbsp;</h1>
+<h1>Contact Us: </h1>
+<h3>Please let us know about you. We always check our inbox, so we are waiting for you!</h3>
+ <p>
+  <form method="POST" action="/contact">
+	 <dl>
+		<dt>E-mail: 
+		<dd><input type="email" name="eMail" required><br/>
+		<dt>Message:
+		<dd><textarea name="txtArea" rows="5" cols="40" required></textarea>
+		<dd><input type="submit" name="submit" value="Send">
+	 </dl>
+  </form>
+ </p>
+	
+</div>
+
+	{% if email %}
+    <p>	{{email}}:{{message}} </p>
+	{% endif %}
+
+{% endblock %}

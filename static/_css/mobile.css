@@ -1,0 +1,176 @@
+/* CSS Document */
+/* Layout */
+#logo {
+	position: absolute;
+	left: 2%;
+	top: 5px;
+	width: 15%;
+	height: 15%;
+	z-index: 15;
+}
+
+#logoname {
+	position: absolute;
+	left: 5%;
+	top: 148px;
+	width: 22%;
+	height: 10%;
+	z-index: 5;
+}
+
+#login {
+	top: 10px;
+	width: 400px;
+	height: 25px;
+	z-index: 10;
+	text-align: right;
+	left: 105px;
+	right: 15%;
+	background: rgba(0,51,204,.7);
+	color: rgba(255,255,255,1);
+	padding: 2px;
+}
+
+nav {
+	top: 40px;
+	left: 105px;
+	width: 400px;
+	height: 70px;
+	z-index: 10;
+	text-align: right;
+	right: 15%;
+	color: rgba(255,255,255,1);
+	padding: 2px;
+}
+nav ul {
+	float: left;
+}
+nav ul li {
+	font-size: .8em;
+	width: 70px;
+}
+
+ul li a {
+	text-decoration: none;
+	color: rgba(255,255,255,1);
+	text-align: center;
+	display: inline;
+	line-height: 30px;
+	font-family: Verdana, Geneva, sans-serif;
+	border-radius: 2px;
+
+/* Home page */
+}
+#home {
+	position: relative;
+	left: 5%;
+	right: 10%;
+	top: 5%;
+	width: 470px;
+	height: 350px;
+	z-index: 1;
+
+}
+#motto1 {
+	left: 7%;
+	top: 150px;
+	width: 380px;
+	height: 40px;
+	font-size: 22px;
+	line-height: 0px;
+}
+
+#motto2 {
+	left: 7%;
+	top: 200px;
+	width: 380px;
+	height: 33px;
+	font-size: 16px;
+}
+
+#video {
+	top: 250px;
+	width: 125px;
+	height: 50px;
+	left: 10%;
+}
+
+#descripton {
+	top: 320px;
+	width: 380px;
+	font-size: 0.8em;
+	left: 10%;
+	height: 130px
+	
+}
+
+#apDiv1 {
+	top: 500px;
+	width: 120px;
+	height: 400px;
+	left: 55px;
+	font-size: 0.8em;
+	text-shadow: 1px 1px 1px rgba(51,51,51,1);
+}
+
+#apDiv1 p img {
+	float: left;
+	width: 7em;
+	height: 7em;
+}
+
+#apDiv2 {
+	top: 500px;
+	width: 120px;
+	;
+	height: 400px;
+	left: 200px;
+	font-size: 0.9em;
+   text-shadow: 1px 1px 1px rgba(51,51,51,1);
+
+}
+#apDiv3 {
+	top: 500px;
+	width: 120px;
+	;
+	height: 400px;
+	left: 350px;
+	font-size: 0.9em;
+	text-shadow: 1px 1px 1px rgba(51,51,51,1);
+
+}
+
+#services {
+	position: absolute;
+	left: 5%;
+	top: 150px;
+	width: 50%;
+	height: 80%;
+	z-index: 11;
+	color: rgba(0,0,0,1);
+	text-align: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.8em;
+}
+
+#services p img {
+	float: left;
+	clear: left;
+}
+
+
+footer {
+	position: absolute;
+	left: 10%;
+	top: 910px;
+	width: 450px;
+	height: 40px;
+	z-index: 14;
+	right: 15%;
+	bottom: 5%;
+	color: rgba(255,255,255,1);
+	text-align: center;
+	font-size: 0.6em;
+	font-weight: lighter;
+	background: rgba(51,51,51,1);
+}

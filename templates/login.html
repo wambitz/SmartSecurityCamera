@@ -1,0 +1,29 @@
+{% block head %}
+ <link href="{{ url_for('static', filename='_css/layout.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/login.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/mobile.css') }}" rel="stylesheet" type="text/css" media="only screen and (max-width:700px)">
+{% endblock %}
+
+{% extends "layout.html" %}
+{% block content %}
+
+
+	{% if error %}<p class=error><strong>Error:</strong> {{error}}{% endif%}
+	<h2>&nbsp;</h2>
+	<h2>&nbsp;</h2>
+	<h2>&nbsp;</h2>
+	<h2>&nbsp;</h2>
+	<div class="login">
+	<h2>Login</h2>
+		{% if error %}<p class=error><strong>Error:</strong> {{error}}{% endif%}
+		<form action="{{url_for('login')}}" method=post>
+			<dl>
+				<dt>Username:
+				<dd><input type=text name=username >
+				<dt>Password:
+				<dd><input type=password name=password >
+				<dd><input type=submit value=Login>
+			</dl>
+		</form>
+	</div>
+{% endblock %}

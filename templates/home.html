@@ -1,0 +1,62 @@
+{% block head %}
+ <link href="{{ url_for('static', filename='_css/layout.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/home.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/mobile.css') }}" rel="stylesheet" type="text/css" media="only screen and (max-width:700px)">
+{% endblock %}
+
+{% extends "layout.html" %}
+{% block content %}
+
+<div id="home">
+</div>
+
+<div id="descripton">
+  <h1>Main Control Page</h1>
+  <p>In this page you can control your surveillance/security <br/>
+     system. If you have any doubts please let us know <br/>
+     and contact us at the <a href="/contact">Contact</a> link</p>
+</div>
+
+<div id="video">
+ <p><a href="#">Watch video</a></p>
+</div>
+
+<div id="apDiv1">
+  <p ><a href="/mode-on"><img src="{{ url_for('static', filename='_images/startbutton.png') }}" width="128" height="128" alt="Start Button"></p></a>
+  <p>START <br/>
+     security/<br/>
+     surveillance. <br/>
+     MODE ON</p>
+  <br>
+   
+  <p ><a href="/mode-off"><img src="{{ url_for('static', filename='_images/stopbutton.png') }}" alt="Stop Button"></p></a>
+  <p>STOP <br/>
+     security/<br/>
+     surveillance. <br/>
+     MODE OF
+  </p>
+</div>
+
+<div id="apDiv2">
+<p><a href="/camera"><img src="{{ url_for('static', filename='_images/camera.png') }}" width="100" height="100" alt="Camera"></a>
+<br/><br/>
+<p>Take a picture <br/>
+    from your camera<br/>
+    and send it to e-mail<br/>
+  </p>
+</div>
+
+<div id="apDiv3">
+<p><a href="/video"><img src="{{ url_for('static', filename='_images/video.png') }}" width="115" height="115" alt="Camera"></a>
+ <p>Stream video <br/>
+     from your camera<br/>
+     into your PC<br/>
+  </p>
+</div>
+
+<div id="motto1">
+  <p>Taking your eyes everywhere</p>
+</div>
+<div id="motto2">- Observer On Server, making devices smarter for you -   </div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% block head %}
+ <link href="{{ url_for('static', filename='_css/layout.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/services.css') }}" rel="stylesheet" type="text/css">
+ <link href="{{ url_for('static', filename='_css/mobile.css') }}" rel="stylesheet" type="text/css" media="only screen and (max-width:700px)">
+{% endblock %}
+
+{% extends "layout.html" %}
+{% block content %}
+<div id="services">
+<h1>Services</h1>
+<p>Here we present our system functions for individually test:</p>
+
+<table width="600px" cellpadding="5">
+  <tr>
+    <td width="130"><a href="/mail"><img src="{{ url_for('static', filename='_images/email-1.png') }}" width="120" height="120" alt="email"></a></td>
+    <td width="160">Send Email </td>
+    <td width="130"><a href="/camera"><img src="{{ url_for('static', filename='_images/camera.png') }}" width="100" height="100" alt="email"></a></td>
+    <td width="160">Take picture</td>
+  </tr>
+  <tr>
+    <td><a href="/wa"><img src="{{ url_for('static', filename='_images/whatsapp.png') }}" width="120" height="120" alt="email"></a></td>
+    <td><p>Send Whatsapp Message</p></td>
+    <td><a href="/video"><img src="{{ url_for('static', filename='_images/video.png') }}" width="100" height="100" alt="email"></a></td>
+    <td>Stream video on computer</td>
+  </tr>
+  <tr>
+    <td><a href="/fb"><img src="{{ url_for('static', filename='_images/facebook_1.png') }}" width="120" height="120" alt="email"></a></td>
+    <td>Post on Facebook </td>
+    <td><a href="/PIR"><img src="{{ url_for('static', filename='_images/PIR.png') }}" width="120" height="120" alt="email"></a></td>
+    <td><p>Test presence sensor</p></td>
+  </tr>
+  <tr>
+    <td><a href="#"><img src="{{ url_for('static', filename='_images/twitter2.png') }}" width="120" height="120" alt="email"></a></td>
+    <td>Post on Twitter</td>
+    <td><a href="/LED"><img src="{{ url_for('static', filename='_images/light.png') }}" width="120" height="120" alt="email"></a></td>
+    <td>Turn on LEDs</td>
+  </tr>
+</table>
+
+</div>
+
+{% endblock %}
